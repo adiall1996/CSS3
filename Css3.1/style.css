@@ -1,0 +1,123 @@
+/*this is an example of css3 new propertirs like gradient*/
+
+#box {
+    box-sizing: border-box;
+    border-bottom-left-radius: 100px;
+}
+
+body#colors{
+    background: rgba(45,32,54,0.8)
+}
+
+#colors #container{
+    width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+    box-sizing: border-box;
+    background: rgba(255,255,255,0.1)
+}
+/*htis is a sample of a gradient in css*/
+#colors #box{
+/*    background: linear-gradient(55deg, black,yellow);*/
+    background:  radial-gradient(blue, yellow ,orange);
+}
+
+#shadow #container{
+    
+    width:  600px;
+    margin: 40px auto;
+    padding: 20px;
+    box-sizing: border-box;
+    background: #fc3;
+/*    box-shadow: 10px 10px #333;*/
+/*    horizontal, vertical, blur, spread;*/
+    box-shadow: 0 20px 10px 15px #333;
+    
+}
+/*shadow: horizontal, vertical, color*/
+/*you can set multiple shadows in css 3*/
+#shadows h1{
+    color: white;
+/*    text-shadow: 2px 2px black;*/
+    text-shadow: 2px 2px 5px black, 2px;
+    
+}
+
+/* 
+#column#
+This is a neat trick to divide text into column.
+
+*/
+
+#tree-columns{
+    -webkit-column-count:3;
+    column-count: 3;
+    
+    -webkit-column-gap: 10px;
+    -moz-column-gap: 10px;
+    column-gap: 10px;
+    
+      -webkit-column-rule-style: solid;
+    -moz-column-rule-style: solid;
+    column-rule-style: solid;
+    
+     -webkit-column-rule-color: aqua;
+    column-rule-color: aqua
+       
+}
+
+/*Animations & Transitions */
+
+@keyframes box{
+    from{ border-radius: 40px; background-color: red;top:0;left:0}
+    to{background-color: 40px;background-color: }
+}
+
+#animations #box{
+    position: relative;
+    animation-name: box;
+    animation-duration: 4s;
+    animation-delay: 4s;
+    animation-iteration-count: 3;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+/*    shorthand version*/
+/*    animation: box 10s linear 2s 3 alternate;*/
+}
+/*Buttons*/
+
+@keyframes buttonAnimation{
+    from{ padding: 10px 20px; font-size: inherit; }
+    to{padding: 15px 20px;font-size: 30px;}
+}
+ 
+.button{
+    display: inline-block;
+    background: #fc3;
+    background: linear-gradient(#fc3,#f91);
+    border: solid 1px #999;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 20px;
+    margin: 10;
+    text-decoration: none;
+    text-shadow: 0 1px 3px rgba(0,0,0,0,0.6)
+}
+
+.button:hover{
+    border-color: #888;
+    text-shadow: 0 1px 2px rgba(0,0,0,0,0.9);
+    background: #f91;
+    background: linear-gradient(to top, #fc3,#f91);
+    animation-name: buttonAnimation;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    
+}
+.button:active{
+    position: relative;
+}
+.alt-button{
+    background: radial-gradient(#fc3, #f91);
+        
+}
